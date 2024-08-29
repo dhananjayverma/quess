@@ -73,101 +73,7 @@ cd <your-repository-folder>
 - **JWT_SECRET**: Used for generating and verifying JSON Web Tokens.
 - **PORT**: The port on which the server will run.
 
-## API Endpoints
 
-### User Registration
-
-- **Method**: POST
-- **URL**: `/api/v1/users/register`
-
-**Body (JSON):**
-
-```json
-{
-  "username": "exampleUser",
-  "password": "examplePassword"
-}
-
-### User Login
-
-- **Method**: POST
-- **URL**: `/api/v1/users/login`
-
-**Body (JSON):**
-
-```json
-{
-  "username": "exampleUser",
-  "password": "examplePassword"
-}
-
-
-### Create Quiz
-
-- **Method**: POST
-- **URL**: `/api/v1/quizzes`
-
-**Body (JSON):**
-
-```json
-{
-  "question": "What is the capital of France?",
-  "options": ["Berlin", "Madrid", "Paris", "Rome"],
-  "rightAnswer": 2,
-  "startDate": "2024-09-01T10:00:00Z",
-  "endDate": "2024-09-01T10:05:00Z"
-}
-
-### Get Quiz Result
-
-- **Method**: GET
-- **URL**: `/api/v1/quizzes/{id}/result`
-  - Replace `{id}` with the quiz's ID
-- **Authorization**: Bearer Token (if authentication is required)
-
-**Response (JSON):**
-
-```json
-{
-  "success": true,
-  "data": {
-    "_id": "quiz_id",
-    "question": "What is the capital of France?",
-    "options": ["Berlin", "Madrid", "Paris", "Rome"],
-    "rightAnswer": 2,
-    "startDate": "2024-09-01T10:00:00Z",
-    "endDate": "2024-09-01T10:05:00Z",
-    "status": "completed",
-    "results": {
-      "totalAttempts": 100,
-      "correctAnswers": 75
-    }
-  }
-}
-### Get All Quizzes
-
-- **Method**: GET
-- **URL**: `/api/v1/quizzes/all`
-- **Authorization**: Bearer Token (if authentication is required)
-
-**Response (JSON):**
-
-```json
-{
-  "success": true,
-  "data": [
-    {
-      "_id": "quiz_id",
-      "question": "What is the capital of France?",
-      "options": ["Berlin", "Madrid", "Paris", "Rome"],
-      "rightAnswer": 2,
-      "startDate": "2024-09-01T10:00:00Z",
-      "endDate": "2024-09-01T10:05:00Z",
-      "status": "inactive"
-    }
-    // More quizzes...
-  ]
-}
 ## Testing with Postman
 
 ### Create Quiz
@@ -200,3 +106,111 @@ cd <your-repository-folder>
 - **Invalid Token**: Ensure your JWT token is correctly set in Postman.
 - **No Active Quiz Found**: Verify there is a quiz within the active time range.
 - **Result Not Available**: Check if 5 minutes have passed since the quiz end time.
+
+
+
+## API Endpoints
+
+
+
+### User Registration
+
+- **Method**: POST
+- **URL**: `/api/v1/users/register`
+
+**Body (JSON):**
+
+```json
+{
+  "username": "exampleUser",
+  "password": "examplePassword"
+}
+
+### User Login
+
+- **Method**: POST
+- **URL**: `/api/v1/users/login`
+
+**Body (JSON):**
+
+```json
+{
+  "username": "exampleUser",
+  "password": "examplePassword"
+}
+
+
+
+
+### Create Quiz
+
+- **Method**: POST
+- **URL**: `/api/v1/quizzes`
+
+**Body (JSON):**
+
+```json
+{
+  "question": "What is the capital of France?",
+  "options": ["Berlin", "Madrid", "Paris", "Rome"],
+  "rightAnswer": 2,
+  "startDate": "2024-09-01T10:00:00Z",
+  "endDate": "2024-09-01T10:05:00Z"
+}
+
+
+
+### Get Quiz Result
+
+- **Method**: GET
+- **URL**: `/api/v1/quizzes/{id}/result`
+  - Replace `{id}` with the quiz's ID
+- **Authorization**: Bearer Token (if authentication is required)
+
+**Response (JSON):**
+
+```json
+{
+  "success": true,
+  "data": {
+    "_id": "quiz_id",
+    "question": "What is the capital of France?",
+    "options": ["Berlin", "Madrid", "Paris", "Rome"],
+    "rightAnswer": 2,
+    "startDate": "2024-09-01T10:00:00Z",
+    "endDate": "2024-09-01T10:05:00Z",
+    "status": "completed",
+    "results": {
+      "totalAttempts": 100,
+      "correctAnswers": 75
+    }
+  }
+}
+
+
+### Get All Quizzes
+
+- **Method**: GET
+- **URL**: `/api/v1/quizzes/all`
+- **Authorization**: Bearer Token (if authentication is required)
+
+**Response (JSON):**
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "_id": "quiz_id",
+      "question": "What is the capital of France?",
+      "options": ["Berlin", "Madrid", "Paris", "Rome"],
+      "rightAnswer": 2,
+      "startDate": "2024-09-01T10:00:00Z",
+      "endDate": "2024-09-01T10:05:00Z",
+      "status": "inactive"
+    }
+    // More quizzes...
+  ]
+}
+
+
