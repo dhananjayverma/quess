@@ -14,44 +14,6 @@ This README provides a detailed guide for the Quiz Application API, built using 
 - [Testing with Postman](#testing-with-postman)
 - [Troubleshooting](#troubleshooting)
 
-## Installation
-
-Instructions for installing and setting up the API.
-
-## Configuration
-
-Details on configuring the API, including environment variables and settings.
-
-## API Endpoints
-
-### Create Quiz
-
-Description of the endpoint for creating a new quiz.
-
-### Get Active Quiz
-
-Description of the endpoint for retrieving active quizzes.
-
-### Get Quiz Result
-
-Description of the endpoint for fetching quiz results.
-
-### Get All Quizzes
-
-Description of the endpoint for retrieving all quizzes.
-
-## Running the Server
-
-Instructions for starting the server.
-
-## Testing with Postman
-
-Steps for testing the API endpoints using Postman.
-
-## Troubleshooting
-
-Common issues and solutions for the API.
-
 
 ## Installation
 
@@ -60,7 +22,7 @@ Clone the repository:
 ```bash
 git clone <your-repository-url>
 cd <your-repository-folder>
-
+```
 
 ## Set up MongoDB
 
@@ -115,7 +77,7 @@ cd <your-repository-folder>
 
 ### User Registration
 
-- **Method**: POST
+- **Method**: `POST`
 - **URL**: `/api/v1/users/register`
 
 **Body (JSON):**
@@ -125,6 +87,7 @@ cd <your-repository-folder>
   "username": "exampleUser",
   "password": "examplePassword"
 }
+```
 
 ### User Login
 
@@ -138,7 +101,7 @@ cd <your-repository-folder>
   "username": "exampleUser",
   "password": "examplePassword"
 }
-
+```
 
 
 
@@ -157,7 +120,7 @@ cd <your-repository-folder>
   "startDate": "2024-09-01T10:00:00Z",
   "endDate": "2024-09-01T10:05:00Z"
 }
-
+```
 
 
 ### Get Quiz Result
@@ -186,7 +149,7 @@ cd <your-repository-folder>
     }
   }
 }
-
+```
 
 ### Get All Quizzes
 
@@ -212,5 +175,5 @@ cd <your-repository-folder>
     // More quizzes...
   ]
 }
-
+```
 
