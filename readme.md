@@ -178,3 +178,5 @@ cd <your-repository-folder>
 ```
 
 #### deploy link :- https://quess95.onrender.com/api/v1/quizzes/active
+
+#### vedio explain :- https://drive.google.com/file/d/1YIZZe4tncOlKBYZjNqtzisvLfWQoF2Pm/view?usp=sharing
